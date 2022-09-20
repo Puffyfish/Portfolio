@@ -15,13 +15,14 @@
     /* custom properties */
 
     --primary-color: #6C3681;
-    --primary-color-m: rgba(113, 56, 135, 0.8);
+    --primary-color-m: rgba(113, 56, 135, 0.5);
     --secondary-color: #1D5C66;
+    --secondary-color-m: rgba(29, 92, 102, 0.5);
     --tertiary-color: #00B8B2;
     --body-color: #f7ede2;
     --font-color: #1C1D35;
 
-    --background-img: url('https://images.unsplash.com/photo-1557264322-b44d383a2906');
+    --background-img: url('images/background.jpg');
 }
 
 body {
@@ -48,15 +49,13 @@ a:visited {
 
 /* ---------------------- main styling --------------- */
 
-/* >>>>>> Main Content <<<<<<< */
-/* all content container = main element */
 main {
-    flex: 1;
+    position: relative;
 }
-
 /* >>>>>> Main Nav Header <<<<<<< */
 header#header {
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color-m);
+    position: relative;
     height: calc(3vw + 3vh);
     z-index: 2;
 }
@@ -69,19 +68,21 @@ ul.header__main-nav--links {
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center
-}
-
-ul.header__main-nav--links li {
-    padding-right: 3vw;
 }
 
 ul.header__main-nav--links li a {
     position: relative;
-    padding: 0.2rem 0.6rem;
+    padding: 0.2rem 3vw;
     font-size: calc(1rem + 0.66667vw);
     font-weight: 500;
+    border-right: 1px solid white;
+    color: white;
+}
+
+ul.header__main-nav--links li a:nth-child(1) {
+    border-left: 1px solid white;
 }
 
 ul.header__main-nav--links li a:link::before,
@@ -119,7 +120,7 @@ ul.header__main-nav--links li a:active::before {
 
 /* >>>>>> Showcase/Hero Section <<<<<<< */
 section#showcase {
-    height: 91vh;
+    height: 100vh;
     background-image: var(--background-img);
     background-position: center;
     background-attachment: fixed;
@@ -127,13 +128,16 @@ section#showcase {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 div.showcase__content {
     background-color: var(--primary-color-m);
-    padding: calc(1rem + 2vw);
-    height: calc(5rem + 20vmax);
+    padding: calc(2rem + 2vw) 6rem;
+    height: calc(6rem + 20vmax);
     color: white;
 
     display: flex;
@@ -200,6 +204,21 @@ div.showcase__content {
     transform-origin: left;
 }
 
+.showcase__stack--list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.showcase__stack--list li {
+    padding-right: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.showcase__stack--list li i {
+    font-size: 2.5rem;
+}
+
 #hire-me-container {
     position: fixed;
     z-index: 4;
@@ -222,6 +241,8 @@ div.showcase__content {
 /* >>>>>> projects Section <<<<<<< */
 section#project {
     background-color: var(--primary-color);
+    position: relative;
+    margin-top: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,7 +262,7 @@ section#project {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 2vw 0;
+    padding: 4vw 0;
 }
 
 .project__header h2 {
@@ -251,15 +272,45 @@ section#project {
     padding: 1rem 0;
 }
 
-.projects__video,
 .projects__card,
 .projects__content {
     flex-basis: 40rem;
 }
 
-.projects__video {
-
+.projects:nth-child(3) {
+    flex-direction: column;
+    align-items: center;
+    padding: 4vw 0;
 }
+
+.projects:nth-child(3) .projects__content {
+    width: 60%;
+    padding-bottom: 0;
+    flex-basis: 20rem;
+    flex-grow: 1;
+}
+.projects__video {
+    margin-bottom: 3rem;
+}
+
+.projects:nth-child(3) .projects__content__para {
+    margin-bottom: 0;
+}
+.projects__content--list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects__content--list div {
+    flex-basis: 20rem;
+    flex-grow: 1;
+}
+
+/* .projects__video video {
+    width: 80%;
+} */
 
 .projects__card {
     width: 30rem;
@@ -324,7 +375,7 @@ video {
 /* >>>>>> About Me Section <<<<<<< */
 
 section#about-me {
-    background-color: black;
+    background-color: var(--primary-color);
     display: flex;
     flex-wrap: wrap;
     padding: calc(4rem + 4vw);
@@ -350,7 +401,7 @@ section#about-me {
     font-size: 4rem;
     line-height: 1;
     margin: -2rem auto 0; /* half of font-size */
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 0 1rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -368,7 +419,7 @@ section#about-me {
 
 section#contact {
     height: 91vh;
-    background-image: var(--background-img);
+    background-image: url('https://images.unsplash.com/photo-1557264322-b44d383a2906');
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -560,25 +611,10 @@ footer {
         background-position: 80%;
     }
 
-    section#services {
-        padding: 6rem 3rem 2rem;
-    }
-
-    .service {
-        padding: calc(1rem + 2vw);
-        margin: 0 0 calc(1rem + 2vw);
-    }
-
-    .services--title,
-    .skills__design--title,
-    .skills__coding--title,
     .projects__content__title {
         font-size: calc(1.2rem + 2vw);
     }
 
-    .services--para,
-    .skills__design h4,
-    .skills__coding h4,
     .projects__content__para {
         font-size: calc(0.8rem + 1.5vw);
     }

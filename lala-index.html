@@ -12,9 +12,9 @@
 
     <!-- Font Awesome -->
     <script
-      src="https://kit.fontawesome.com/fbadad80a0.js"
-      crossorigin="anonymous"
-    ></script>
+    src="https://kit.fontawesome.com/f82df14a80.js"
+    crossorigin="anonymous"
+  ></script>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="lala-styles.css" />
@@ -35,8 +35,9 @@
           </div>
           <ul class="header__main-nav--links">
             <li><a href="#">Home</a></li>
-            <li><a href="#about-me">About</a></li>
             <li><a href="#project">Projects</a></li>
+            <li><a href="#about-me">CV</a></li>
+            <li><a href="#about-me">About</a></li>
             <li><a href="#contact">Hire Me</a></li>
           </ul>
         </nav>
@@ -50,6 +51,14 @@
             Frontend Developer
           </p>
           <a href="#" class="showcase__content--link">My Work</a>
+          <ul class="showcase__stack--list">
+            <li>Tech-stack: </li>
+            <li><i class="fab fa-html5"></i></li>
+            <li><i class="fab fa-css3-alt"></i></li>
+            <li><i class="fab fa-square-js"></i></li>
+            <li><i class="fab fa-angular"></i></li>
+            <li><i class="fab fa-node-js"></i></li>
+          </ul>
         </div>
         <div id="hire-me-container">
           <a href="#contact" id="hire-me-btn">Hire Me</a>
@@ -88,8 +97,43 @@
               <a href="https://vaibhav-thalanki.github.io/recipe-site/index.html"></a>
           </div>
         </div>
+        <!-- Card 2 (CRM Dashboard)-->
+        <div class="projects">
+          <div class="projects__video">
+              <video width="700" controls>
+                <source src="images/crm-tool.mp4" type="video/mp4">
+              </video>
+          </div>
+            
+          <div class="projects__content">
+            <h2 class="projects__content__title">CRM Dashboard</h2>
+            <div class="projects__content--list"> 
+              <div>
+            <h3 class="projects__content__subtitle">My Role</h3>
+              <p class="projects__content__para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                sunt quis cupiditate ducimus non esse?
+              </p>
+            </div>
+            <div>
+              <h3 class="projects__content__subtitle">Project Difficulties</h3>
+              <p class="projects__content__para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                sunt quis cupiditate ducimus non esse?
+              </p>
+            </div>
+            <div>
+              <h3 class="projects__content__subtitle">My Solution</h3>
+              <p class="projects__content__para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                sunt quis cupiditate ducimus non esse?
+              </p>
+            </div>
+            </div> 
+          </div>
+        </div>
 
-        <!-- Card 2 (Recipe Site)-->
+        <!-- Card 3 (Recipe Site)-->
         <div class="projects">
           <div class="projects__card">
               <div class="card-front card-front--2">
@@ -124,34 +168,6 @@
               </p>
           </div>
         </div>
-
-        <!-- Card 3 (CRM Dashboard)-->
-        <div class="projects">
-          <div class="projects__video">
-              <video width="400" controls>
-                <source src="images/crm-tool.mp4" type="video/mp4">
-              </video>
-          </div>
-            
-          <div class="projects__content">
-            <h2 class="projects__content__title">CRM Dashboard</h2>
-              <h3 class="projects__content__subtitle">My Role</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
-              <h3 class="projects__content__subtitle">Project Difficulties</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
-              <h3 class="projects__content__subtitle">My Solution</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
-          </div>
-        </div>
       </section>
 
       <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* About Me Section *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
@@ -169,11 +185,11 @@
 
       <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Contact Section *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
       <section id="contact">
-        <form class="contact__form">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="Subject" />
-          <textarea name="message" placeholder="Message"></textarea>
+        <form class="contact__form" onsubmit="sendEmail(); reset(); return false;">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="subject" placeholder="Subject" required />
+          <textarea name="message" id="message" placeholder="Message" required></textarea>
           <input type="submit" value="Submit" />
         </form>
       </section>
@@ -190,6 +206,20 @@
           </div>
         <footer>
 
-    <script src="app.js"></script>
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
+          <script>
+          function sendEmail() {
+            Email.send({
+              SecureToken : "<your generated token>",
+              To : 'jlalama2011@gmail.com',
+              From : document.getElementById('email').value,
+              Subject : document.getElementById('subject').value,
+              Body : "Name: " + document.getElementById('name').value +
+              "<br> Message: " + document.getElementById('message').value
+              }).then(
+                  message => alert("Message sent successfully!")
+              );
+          }
+          </script>
   </body>
 </html>
