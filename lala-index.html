@@ -26,32 +26,28 @@
     <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Main Content *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
     <main>
       <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Main Nav *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
-      <header id="header">
-        <nav id="header__main-nav">
-          <div class="header__main-nav--hamburger">
+      <header id="header" class="flex">
+        <nav id="main-nav">
+          <div class="nav--hamburger">
             <div class="line line-1"></div>
             <div class="line line-2"></div>
             <div class="line line-3"></div>
           </div>
-          <ul class="header__main-nav--links">
-            <li><a href="#">Home</a></li>
+          <ul class="nav--links flex">
             <li><a href="#project">Projects</a></li>
             <li><a href="#about-me">CV</a></li>
             <li><a href="#about-me">About</a></li>
             <li><a href="#contact">Hire Me</a></li>
           </ul>
         </nav>
-      </header>
-
-      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Showcase / Hero Section *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
-      <section id="showcase">
+        <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Showcase / Hero Section *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
         <div class="showcase__content">
-          <h1 class="showcase__content--title">Jean Susor</h1>
-          <p class="showcase__content--para">
+          <h1 class="showcase__title">Jean Susor</h1>
+          <p class="showcase__para">
             Frontend Developer
           </p>
-          <a href="#" class="showcase__content--link">My Work</a>
-          <ul class="showcase__stack--list">
+          <a href="#project" class="showcase__link">My Work</a>
+          <ul class="showcase__stack--list flex">
             <li>Tech-stack: </li>
             <li><i class="fab fa-html5"></i></li>
             <li><i class="fab fa-css3-alt"></i></li>
@@ -63,115 +59,153 @@
         <div id="hire-me-container">
           <a href="#contact" id="hire-me-btn">Hire Me</a>
         </div>
-      </section>
 
+      </header>
+
+      
       <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Projects Section *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
-      <section id="project">
+      <article id="project" class="flex">
         <div class="project__header">
-          <h2>Projects</h2>
+          <h2 class="text-center">Projects</h2>
         </div>
         <!-- Card 1 (E-commerce Site)-->
-        <div class="projects">
+        <div class="projects flex generic-padding">
           <div class="projects__card">
               <div class="card-front card-front--1">
               </div>
           </div>
             
           <div class="projects__content">
+            <div>
             <h2 class="projects__content__title">E-commerce Site</h2>
+            <ul class="showcase__stack--list flex">
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>Bootstrap</li>
+              <li>Javascript</li>
+            </ul>
+          </div>
+            <div>
               <h3 class="projects__content__subtitle">My Role</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
+              <ul class="projects__content--rolesList">
+                <li>Carousel of Images as Products</li>
+                <li>Shopping cart using javascript</li>
+              </ul>
+            </div>
+              <div>
               <h3 class="projects__content__subtitle">Project Difficulties</h3>
               <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
+                It was a bit of a learning curve making the shopping cart to work. It was hard to synchronized the cart page of ordered products from the products page. 
               </p>
+            </div>
+              <div>
               <h3 class="projects__content__subtitle">My Solution</h3>
               <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
+                I had to learn how to use local storage. Products ordered from product page needs to be stored in local storage. Then data is accessed from local storage to show in the cart's page.
               </p>
-              <a href="https://vaibhav-thalanki.github.io/recipe-site/index.html"></a>
-          </div>
+              </div>
+              <div class="projects__links">
+              <a class="link-button" target="_blank" href="#">Website</a>
+                <a class="link-button" target="_blank" href="https://github.com/Vaibhav-Thalanki/AMAZON_CLONE">Github</a>
+            </div>
+            </div>
         </div>
         <!-- Card 2 (CRM Dashboard)-->
-        <div class="projects">
+        <div class="projects generic-padding">
           <div class="projects__video">
-              <video width="700" controls>
+              <video width="800" controls>
                 <source src="images/crm-tool.mp4" type="video/mp4">
               </video>
           </div>
             
           <div class="projects__content">
-            <h2 class="projects__content__title">CRM Dashboard</h2>
+            <h2 class="projects__content__title text-center">CRM Dashboard</h2>
+            <ul class="showcase__stack--list flex">
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>Bootstrap</li>
+              <li>Javascript</li>
+              <li>ChartJS</li>
+              <li>ExpressJS</li>
+              <li>MongoDB</li>
+              <li>NodeJS</li>
+            </ul>
             <div class="projects__content--list"> 
               <div>
-            <h3 class="projects__content__subtitle">My Role</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
+                <h3 class="projects__content__subtitle">My Role</h3>
+                <ul class="projects__content--rolesList">
+                  <li>Overall design</li>
+                  <li>Responsible for CRUD operation of data for Customers, Products, Suppliers</li>
+                    <ul class="projects__content--rolesList"><li>Setting the routes using ExpressJS</li>
+                    <li>Creating the models/schemas</li>
+                    <li>Designing the pages</li>
+                    <li>Manipulating mongoose to properly show correct data</li></ul>
+                  <li>Making seed file for dummy data</li>
+                  <li>Demonstrating data using ChartJS</li>
+                </ul>
+               
+              </div>
+              <div>
+                <h3 class="projects__content__subtitle">Project Difficulties</h3>
+                <p class="projects__content__para">
+                  There was a lot of problems creating this project but the most memorable one was creating the file for the dummy data. Product data rely on the Supplier ID so that every product will be under a certain supplier.
+                  The problem was, at that time, I just know that Object IDs are just automatically created every time data is added. So I couldn't create the dummy data for products. 
+                  </p>
+              </div>
+              <div>
+                <h3 class="projects__content__subtitle">My Solution</h3>
+                <p class="projects__content__para">
+                  I tried to use object_ID's of suppliers that was made through GUI. Then I deleted those suppliers. Using the old object_ID's along with dummy data for every supplier, I run the seed file and it worked. I then created data for products using the old object IDs of supplier as reference, 4 products for each supplier (3 suppliers), a total of 12. I spent half a day running the seed file, deleting the data in MongoDB, running, then deleting until I got the code to work the way I wanted. 
+                  </p>
+              </div>
             </div>
-            <div>
-              <h3 class="projects__content__subtitle">Project Difficulties</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
-            </div>
-            <div>
-              <h3 class="projects__content__subtitle">My Solution</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
-            </div>
+            <div class="projects__links">
+              <a class="link-button" target="_blank" href="#">Website</a>
+              <a class="link-button" target="_blank" href="https://github.com/MA5TERMIND2020/CRM-Tool">Github</a>
             </div> 
           </div>
         </div>
 
         <!-- Card 3 (Recipe Site)-->
-        <div class="projects">
+        <div class="projects flex generic-padding">
           <div class="projects__card">
               <div class="card-front card-front--2">
                </div>
-              <!-- <div class="card-back">
-               <h5>Technologies Used</h5>
-                <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-                <li>Javascript</li>
-                </ul>
-              </div> -->
           </div>
             
           <div class="projects__content">
             <h2 class="projects__content__title">Recipe Site</h2>
+            <ul class="showcase__stack--list flex">
+              <li>HTML5</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>Bootstrap</li>
+            </ul>
               <h3 class="projects__content__subtitle">My Role</h3>
-              <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
-              </p>
+              <ul class="projects__content--rolesList">
+                <li>overall design of website</li>
+                <li>popup feature of recipes</li>
+              </ul>
               <h3 class="projects__content__subtitle">Project Difficulties</h3>
               <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
+                The popup feature did not fetch the exact recipe. It fetches only the data of whatever is the first 
+                result of the array showing 10 result per search term.
               </p>
               <h3 class="projects__content__subtitle">My Solution</h3>
               <p class="projects__content__para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-                sunt quis cupiditate ducimus non esse?
+                It took me a long time to find the answer. But the solution was just to create a function 
+                to make an ID before fetching the data and showing it over to the document (DOM).
               </p>
-          </div>
+              <div class="projects__links">
+                <a class="link-button" target="_blank" href="https://vaibhav-thalanki.github.io/recipe-site/index.html">Website</a>
+                  <a class="link-button" target="_blank" href="https://github.com/Vaibhav-Thalanki/recipe-site">Github</a>
+              </div>
+          </div>          
         </div>
-      </section>
+      </article>
 
       <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* About Me Section *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
-      <section id="about-me">
+      <section id="about-me" class="flex generic-padding">
         <div class="about-me__content">
           <h2 class="about-me__content--title">About Me</h2>
           <p class="about-me__content--para">I am a nurse-turned-developer. 
@@ -184,8 +218,9 @@
       </section>
 
       <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Contact Section *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
-      <section id="contact">
-        <form class="contact__form" onsubmit="sendEmail(); reset(); return false;">
+      <section id="contact" class="flex generic-padding">
+        <form class="contact__form" action="mailto:jlalama2011@gmail.com" method="POST"
+            enctype="text/plain" name="EmailForm">
           <input type="text" id="name" placeholder="Name" required />
           <input type="email" id="email" placeholder="Email" required />
           <input type="text" id="subject" placeholder="Subject" required />
@@ -193,33 +228,17 @@
           <input type="submit" value="Submit" />
         </form>
       </section>
+      <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Footer *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
+      <footer class="flex">
+        <ul class="footer--social flex">
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100007224167731">Facebook</a>
+          <a target="_blank" href="https://github.com/Puffyfish">Github</a>
+          <a target="_blank" href="https://www.linkedin.com/in/jean-susor/">LinkedIn</a>
+          <a target="_blank" href="#">Upwork</a>
+        </ul>
+      </footer>
     </main>
 
-        <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Footer *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
-        <footer>
-            <ul class="footer--social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://github.com/Puffyfish"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/jean-lalaine-susor-8037844b/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </ul>
-          </div>
-        <footer>
-
-          <script src="https://smtpjs.com/v3/smtp.js"></script>
-          <script>
-          function sendEmail() {
-            Email.send({
-              SecureToken : "<your generated token>",
-              To : 'jlalama2011@gmail.com',
-              From : document.getElementById('email').value,
-              Subject : document.getElementById('subject').value,
-              Body : "Name: " + document.getElementById('name').value +
-              "<br> Message: " + document.getElementById('message').value
-              }).then(
-                  message => alert("Message sent successfully!")
-              );
-          }
-          </script>
+          <script src="script.js"></script>
   </body>
 </html>
