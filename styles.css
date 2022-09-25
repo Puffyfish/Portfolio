@@ -386,16 +386,11 @@ video {
     letter-spacing: 0;
 }
 
-.projects:nth-child(3) .projects__links {
-    justify-content: center;
-}
-
 /* ---------- Gereral classes used under Projects */
 .projects__content--rolesList {
     padding-left: 3rem;
     margin-bottom: 2rem;
 }
-
 
 .projects__content--rolesList li {
     list-style-type: disc;
@@ -430,8 +425,8 @@ video {
     transition-duration: 200ms;
     box-shadow: 1px 1px 15px 1px var(--tertiary-color);
 }
-/* >>>>>> About Me Section <<<<<<< */
 
+/* >>>>>> About Me Section <<<<<<< */
 section#about-me {
     background-color: var(--secondary-color);
     justify-content: center;
@@ -460,9 +455,7 @@ section#about-me {
     letter-spacing: 0.2rem;
 }
 
-
 /* >>>>>>> Contacts Page <<<<<< */
-
 section#contact {
     height: 100vh;
     background-image: url('https://images.unsplash.com/photo-1557264322-b44d383a2906');
@@ -520,7 +513,6 @@ footer {
 .footer--social {
     justify-content: space-evenly;
 }
-
 
 .footer--social a {
     /* 20px => 2rem => {1rem + [(10/1500) * 100]} => dynamic value */
