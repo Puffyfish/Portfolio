@@ -35,7 +35,7 @@
           </div>
           <ul class="nav--links flex">
             <li><a href="#project">Projects</a></li>
-            <li><a href="images/Jean-Susor-CV.pdf" target="_blank">CV</a></li>
+            <li><a href="images/Jean-Susor_CV.pdf" target="_blank">CV</a></li>
             <li><a href="#about-me">About</a></li>
             <li><a href="#contact">Hire Me</a></li>
           </ul>
@@ -49,11 +49,32 @@
           <a href="#project" class="showcase__link">My Work</a>
           <ul class="showcase__stack--list flex">
             <li>Tech-stack: </li>
-            <li><i class="fab fa-html5"></i></li>
-            <li><i class="fab fa-css3-alt"></i></li>
-            <li><i class="fab fa-square-js"></i></li>
-            <li><i class="fab fa-angular"></i></li>
-            <li><i class="fab fa-node-js"></i></li>
+            <li class="tooltip">
+              <i class="fab fa-html5"></i>
+              <span class="tooltiptext">HTML</span>
+            </li>
+            <li class="tooltip">
+              <i class="fab fa-css3-alt"></i>
+              <span class="tooltiptext">CSS</span>
+            </li>
+            <li class="tooltip">
+              <div id="typescript">
+                TS
+                <span class="tooltiptext">Typescript</span>
+              </div>
+            </li>
+            <li class="tooltip">
+              <i class="fab fa-square-js"></i>
+              <span class="tooltiptext">Javascript</span>
+            </li>
+            <li class="tooltip">
+              <i class="fab fa-angular"></i>
+              <span class="tooltiptext">Angular</span>
+            </li>
+            <li class="tooltip">
+              <i class="fab fa-node-js"></i>
+              <span class="tooltiptext">NodeJS</span>
+            </li>
           </ul>
         </div>
         <div id="hire-me-container">
@@ -68,45 +89,49 @@
         <div class="project__header">
           <h2 class="text-center">Projects</h2>
         </div>
-        <!-- Card 1 (E-commerce Site)-->
+        <!-- Card 1 (Report Log Site)-->
         <div class="projects flex generic-padding">
-          <div class="projects__card">
-              <div class="card-front card-front--1">
-              </div>
+          <div class="projects__img">
+                <img src="./images/notesnimo-landing.png" alt="">
           </div>
             
           <div class="projects__content">
             <div>
-            <h2 class="projects__content__title">E-commerce Site</h2>
+            <h2 class="projects__content__title">Report Log Site</h2>
             <ul class="showcase__stack--list flex">
-              <li>HTML5</li>
-              <li>CSS</li>
-              <li>Bootstrap</li>
+              <li class="hidden-xl">HTML5</li>
+              <li>SCSS/CSS</li>
               <li>Javascript</li>
+              <li>Angular</li>
+              <li>Angular Material</li>
+              <li>PHP</li>
+              <li>MySQL</li>
             </ul>
           </div>
             <div>
               <h3 class="projects__content__subtitle">My Role</h3>
               <ul class="projects__content--rolesList">
-                <li>Carousel of Images as Products</li>
-                <li>Shopping cart using javascript</li>
+                <li>created the landing, reports, and projects page</li>
+                <li>overall design of the website</li>
+                <li>light and dark theme enabled using Angular Material</li>
               </ul>
             </div>
               <div>
               <h3 class="projects__content__subtitle">Project Difficulties</h3>
               <p class="projects__content__para">
-                It was a bit of a learning curve making the shopping cart to work. It was hard to synchronized the cart page of ordered products from the products page. 
+                This is my first big project using Angular so everthing took awhile from making the forms using reactive approach, handling errors, to creating the theme using Angular Material. 
               </p>
             </div>
               <div>
               <h3 class="projects__content__subtitle">My Solution</h3>
               <p class="projects__content__para">
-                I had to learn how to use local storage. Products ordered from product page needs to be stored in local storage. Then data is accessed from local storage to show in the cart's page.
+                I had to practice creating several small projects with forms to get a better grasp of it. I had a local copy of the project so I could play arouund with it until I got the code working, then I would copy it to the main project repository.
+
+                As for the theming using Angular Material, I just had to find a proper tutorial.
               </p>
               </div>
               <div class="projects__links">
-              <!-- <a class="link-button" target="_blank" href="#">Website</a> -->
-                <a class="link-button" target="_blank" href="https://github.com/Vaibhav-Thalanki/AMAZON_CLONE">Github</a>
+              <a class="link-button" target="_blank" href="http://notesnimo.com/welcome/">Website</a>
             </div>
             </div>
         </div>
@@ -168,9 +193,8 @@
 
         <!-- Card 3 (Recipe Site)-->
         <div class="projects flex generic-padding">
-          <div class="projects__card">
-              <div class="card-front card-front--2">
-               </div>
+          <div class="projects__img" id="recipe-img">
+                <img src="./images/recipe-site.jpeg" alt="">
           </div>
             
           <div class="projects__content">
@@ -231,7 +255,6 @@
       <!--*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Footer *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-->
       <footer class="flex">
         <ul class="footer--social flex">
-          <a target="_blank" href="https://www.facebook.com/profile.php?id=100007224167731">Facebook</a>
           <a target="_blank" href="https://github.com/Puffyfish">Github</a>
           <a target="_blank" href="https://www.linkedin.com/in/jean-susor/">LinkedIn</a>
           <a target="_blank" href="https://www.upwork.com/freelancers/~01f6f40afc9d962f44">Upwork</a>
